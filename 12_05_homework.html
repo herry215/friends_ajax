@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    </head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            function updateTime() {
+                var date = new Date();
+                $("#seoul").val(date.toLocaleString());
+                date.setHours(date.getHours() - 9);
+                $("#london").val(date.toLocaleString());
+            }
+            updateTime();
+            setInterval(updateTime, 1000);
+        });
+    </script>
+<body>
+    서울: <input type="text" value="" id="seoul"><br>
+    런던: <input type="text1" value="" id="london">
+
+</body>
+</html>
